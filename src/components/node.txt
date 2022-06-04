@@ -1,0 +1,1 @@
+//nơi share sound code component dùng nhiều nơi, tái sd code
