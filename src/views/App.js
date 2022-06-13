@@ -1,24 +1,14 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './Ex-Compo/MyComponent.js';
+import LearnComponent from './Ex-Compo/LearnComponent.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Well come to my web.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <MyComponent />
+        <h2>Totoo's App</h2>
+        <LearnComponent />
       </header>
     </div>
   );
