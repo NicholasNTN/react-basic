@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 class AddComponent extends React.Component {
 
@@ -24,7 +25,7 @@ class AddComponent extends React.Component {
 
         //nếu ko nhập vào Title hay Salary thì sẽ hiện tbao lỗi
         if (!this.state.Title || !this.state.Salary) {
-            alert('Missing required params !')
+            toast.error('Missing required params !')
             //đồng thời nó sẽ return ko chạy đống code đằng sau
             return;
         }

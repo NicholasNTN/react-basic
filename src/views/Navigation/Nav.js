@@ -8,7 +8,7 @@ class Nav extends React.Component {
             <div className="topnav">
                 <a className="active" href="/">Home</a>
                 <a href="/Todo's">Todo's</a>
-                <a href="/about">About</a>
+                <a href="/inputData">Input data</a>
             </div>
         )
     }

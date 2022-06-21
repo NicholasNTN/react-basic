@@ -13,7 +13,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Link
+  //Link
 } from "react-router-dom";
 
 
@@ -33,7 +33,7 @@ function App() {
             <Route path="/Todo's">
               <ListTodo />
             </Route>
-            <Route path="/about">
+            <Route path="/inputData">
               <LearnComponent />
             </Route>
           </Switch>

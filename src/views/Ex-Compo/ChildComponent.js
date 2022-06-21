@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 import "./Child.scss"
 
 // const ChildComponent = (props) =>{
@@ -21,7 +22,7 @@ class ChildComponent extends React.Component {
     }
 
     handleOnclickDelete = (job) => {
-        alert('Are you sure you want to delete !')
+        toast.success('Are you sure you want to delete !')
         console.log('>>handleOnclickDelete: ', job)
         this.props.deleteAJob(job)
     }
@@ -44,12 +45,13 @@ class ChildComponent extends React.Component {
                     <>
                         <div className="job-lists">
                             {
+                                // eslint-disable-next-line array-callback-return
                                 arrJobs.map((item, index) => {
                                     if (item.Salary >= 0) {
                                         return (
-                                            <div key={item.id}>
+                                            <div className="" key={item.id}>
                                                 {/* key:giúp react biết ptu nào tđ, và cập nhật chính xác pt đó */}
-                                                {item.Title} - {item.Salary} $
+                                                {index + 1}. {item.Title} - {item.Salary} $
                                                 <> </>
                                                 <span>
                                                     <button className="bth-delete" onClick={() => this.handleOnclickDelete(item)}>Del</button>
