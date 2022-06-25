@@ -1,1 +1,2 @@
 //nơi viết redux
+//code liên quan đến redux dều viết hết trong thư mục store

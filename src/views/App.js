@@ -4,11 +4,14 @@ import LearnComponent from './Ex-Compo/LearnComponent.js';
 import ListTodo from './Todos/ListTodo.js';
 import Nav from './Navigation/Nav';
 import Home from './Ex-Compo/Home';
+import ListUser from './Users/ListUser';
+import DetailUser from './Users/DetailUser';
 
 //1:toast
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+//react-router-dom
 import {
   BrowserRouter,
   Switch,
@@ -27,16 +30,24 @@ function App() {
           <h2>Todo's App</h2>
 
           <Switch>
-            <Route path="/" exact>
+            <Route path="/home" exact>
               <Home />
             </Route>
-            <Route path="/Todo's">
+            <Route path="/Todo">
               <ListTodo />
             </Route>
             <Route path="/inputData">
               <LearnComponent />
             </Route>
+            <Route path="/user" exact>
+              <ListUser />
+            </Route>
+            <Route path="/user/:id">
+              {/* :id: laf tham so ta quy dinh khi xuat no se hien la id, co the thay doi, ex: maybe changle = name! */}
+              <DetailUser />
+            </Route>
           </Switch>
+
 
         </header>
 
