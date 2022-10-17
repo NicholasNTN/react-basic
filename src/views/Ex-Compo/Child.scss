@@ -1,8 +1,9 @@
 .bth-delete{
-    color: red;
-    background-color: black;
-    border-radius: 50%;
-    
+    // color: red;
+    // background-color: black;
+    // border-radius: 50%;
+    background-color:opacify($color: #000000, $amount: 0);
+    margin: auto;
 }
 
 .bth-show{

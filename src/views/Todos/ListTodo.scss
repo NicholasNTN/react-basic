@@ -38,13 +38,14 @@ input[type=text]:focus {
         &:first-child{
             border-top: 1px solid grey;
         }
-        height: 40px;
+        height: 50px;
         border-bottom: 1px solid grey;
         margin: 10px;
 
         .button-edit{
-            border-radius: 50%;
-            margin: 0 1px;
+            // border-radius: 50%;
+            // margin: 0 1px;
+            background-color:opacify($color: #000000, $amount: 0);
         }
         .button-edit:hover{
             background-color: #282c34; /* Green */
@@ -52,8 +53,9 @@ input[type=text]:focus {
             border: 2px solid #4CAF50;
         }
         .button-delete{
-            border-radius: 50%;
-            color: black;
+            // border-radius: 50%;
+            // color: black;
+            background-color:opacify($color: #000000, $amount: 0);
         }
         .button-delete:hover{
             background-color: red; /* Green */

@@ -1,7 +1,6 @@
 import React from "react";
 import AddTodo from "./AddTodo";
 import './ListTodo.scss';
-import Color from "../HOC/Color";
 //3:toast
 import { toast } from 'react-toastify';
 
@@ -14,7 +13,7 @@ class ListTodo extends React.Component {
             { id: 'todo1', title: 'Doing homework' },
             { id: 'todo2', title: 'Making videos' },
             { id: 'todo3', title: 'Fixing bugs' },
-            { id: 'todo4', title: 'Suck!!' },
+            { id: 'todo4', title: 'S!!' },
         ],
         //1.1: add obj edittodo
         editTodo: {
@@ -176,5 +175,6 @@ class ListTodo extends React.Component {
         )
     }
 }
+
 // export default ListTodo;
-export default Color(ListTodo);
+export default ListTodo;

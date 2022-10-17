@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './styles/global.scss';
 import App from './views/App';
 import reportWebVitals from './reportWebVitals';
+//redux
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import rootReducer from './reducers';
+import { legacy_createStore as createStore } from 'redux';
+import rootReducer from './stote/reducers/rootReducer';
 
+const reduxStore = createStore(rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENTION__ && window.__REDUX_DEVTOOLS_EXTENTION__());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* Bọc provider ngoài App, provider giống như 1 nhà cung cấp,và là hàm của react vs redux */}
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
